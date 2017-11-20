@@ -1,0 +1,295 @@
+@import 'variables';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: $pageColor;
+    color: $textColor;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
+/*Header Styles */
+
+header {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 50px 0px;
+    nav {
+        display: flex;
+        margin-right: -15px;
+    }
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.7;
+    margin: 10px;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 1.25em;
+    margin: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    font-size: 1.2em;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    opacity: 0.75;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 45px;
+    margin: 0 auto;
+}
+
+p {
+    max-width: 768px;
+    line-height: 1.6;
+    font-size: 1.05em;
+    font-weight: 300;
+    text-align: center;
+}
+
+
+/*Hero Styles */
+
+.hero {
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.background-image {
+    background: url('../img/bikemain.jpeg') center center fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index: -1;
+    min-height: 100vh;
+}
+
+
+/*About Us Section*/
+
+.aboutus {
+    background-color: $sectionColor;
+}
+
+.grid-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    li {
+        padding: 40px;
+        flex-basis: 33%;
+        text-align: center;
+    }
+    h3 {
+        font-size: 28px;
+        margin: 25px 0;
+    }
+}
+
+.description {
+    font-size: 1.25em;
+}
+
+@media screen and (max-width: 800px) {
+    .grid-container li {
+        flex-basis: 100%;
+        padding: 20px;
+    }
+}
+
+
+/* Contact Section */
+
+.contact {
+    background-color: $altSectionColor;
+    color: $pageColor;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+.brand {
+    text-align: center;
+}
+
+.wrapper {
+    box-shadow: 0 0 20px 0 rgba(72, 94, 116, 0.7)
+}
+
+.wrapper>* {
+    padding: 1em;
+}
+
+.contact-grid {
+    background-color: #f9feff;
+    form {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 5px;
+        label {
+            display: block;
+        }
+        p {
+            margin: 0;
+            grid-column: 1/2;
+            font-size: 1em;
+            padding: 0 10px;
+        }
+        button,
+        input,
+        textarea {
+            width: 100%;
+            padding: 1em;
+            border: 1px solid #c9e6ff;
+        }
+
+        textarea {
+            max-width: 100%;
+        }
+        button {
+            background-color: #c9e6ff;
+            border: 0;
+            text-transform: uppercase;
+            &:hover,
+            &:focus {
+                background: #92bde7;
+                color: white;
+                outline: 0;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .wrapper>* {
+        padding: 2em;
+    }
+    .contact-grid {
+        grid-gap: 20px;
+        form {
+            padding: 10px;
+        }
+        p {
+            margin: 10px;
+            font-size: 1.25em;
+        }
+        button,
+        input,
+        textarea {
+            width: 100%;
+            padding: 3em;
+        }
+    }
+}
+
+
+/* Footer */
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 15px 30px;
+    ul {
+        display: flex;
+        justify-content: space-around;
+        padding: 0;
+    }
+    li {
+        margin-left: 20px;
+    }
+
+    // .location, .hours, .icons {
+    //     display: flex;
+    //     flex-direction: column;
+    //     margin: 0 auto;
+    // }
+
+    .icons {
+        flex-direction: row !important;
+    }
+}
+
+
+@media (max-width: 767px) {
+    header {
+        flex-direction: column;
+    }
+    li {
+        padding: 10px;
+        font-size: 1em;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    h2 {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+    }
+    h3 {
+        font-size: 1.1em;
+    }
+    p,
+    .description {
+        font-size: 1.1em;
+        padding: 0 10px;
+        margin: 0 auto;
+    }
+
+    footer {
+        justify-content: center;
+        padding: 20px;
+        .location, .hours{
+            padding: 10px;
+            flex-basis: 100%;
+        }
+
+    }
+}
