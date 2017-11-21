@@ -167,7 +167,7 @@ p {
 }
 
 .contact-grid {
-    background-color: #f9feff;
+    background-color: $formBackground;
     form {
         display: grid;
         grid-template-columns: 1fr;
@@ -186,19 +186,19 @@ p {
         textarea {
             width: 100%;
             padding: 1em;
-            border: 1px solid #c9e6ff;
+            border: 1px solid $formColor;
         }
 
         textarea {
             max-width: 100%;
         }
         button {
-            background-color: #c9e6ff;
+            background-color: $formColor;
             border: 0;
             text-transform: uppercase;
             &:hover,
             &:focus {
-                background: #92bde7;
+                background: $formButtonColor;
                 color: white;
                 outline: 0;
             }
